@@ -1,5 +1,5 @@
 import "./Product.scss";
-interface IProductProps {
+export interface IProductProps {
   src?: string;
   alt?: string;
   name: string;
@@ -9,7 +9,7 @@ interface IProductProps {
   information: string;
   price: number;
 }
-export const Product: React.FC<IProductProps> = ({
+ const ProductItem: React.FC<IProductProps> = ({
   src,
   alt,
   name,
@@ -21,7 +21,7 @@ export const Product: React.FC<IProductProps> = ({
 }) => {
   return (
     <div className="product">
-      <img src={require(`../../../../../../${src}`)} alt={alt} />
+      <img src={require(`../../../../../image/DietsPage/${src}`)} alt={alt} />
       <div className="product-summary">
         <h6 className="product-name">{name}</h6>
         <div className="product-kcal">
@@ -41,3 +41,5 @@ export const Product: React.FC<IProductProps> = ({
     </div>
   );
 };
+
+export default ProductItem;

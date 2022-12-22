@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./NavMenu.scss";
 export const NavMenu: React.FC = () => {
   const liList = [
@@ -13,11 +14,15 @@ export const NavMenu: React.FC = () => {
   return (
     <nav>
       <ul>
-        {liList.map((navItem) => (
-          <li>
-            <a href="#">{navItem}</a>
-          </li>
-        ))}
+        {liList.map((navItem,index) => {
+          return navItem === "Diets" ? (
+            <Link to="/diets" key={index}>{navItem}</Link>
+          ) : (
+            <li key={index}>
+              <a href="#">{navItem}</a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

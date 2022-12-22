@@ -108,8 +108,9 @@
     width: 100%;
     margin: auto;
     text-align: center;
+    padding:0;
     h2 {
-      font-size: 40px;
+      font-size: 30px;
     }
     .premium-quality {
       width: 100%;
@@ -119,10 +120,10 @@
       }
     }
     .catering-diets {
-      width: 100%;
+      width: 300px;
       margin-left: 20px;
       .red_apple {
-        width: 20vh;
+        width: 10vh;
       }
     }
     .exacting {
@@ -133,7 +134,7 @@
         }
       }
       .avocado {
-        width: 100px;
+        width: 50px;
       }
     }
     
